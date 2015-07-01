@@ -211,7 +211,6 @@ static int (*csd_wide_voice)(uint8_t);
 static int (*csd_slow_talk)(uint8_t);
 static int (*csd_fens)(uint8_t);
 static int (*csd_volume_index)(int);
-static int (*csd_volume)(int);
 static int (*csd_start_voice)(int,int,int);
 static int (*csd_stop_voice)(int);
 static int (*csd_client_volume)(int);

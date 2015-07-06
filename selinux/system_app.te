@@ -1,3 +1,0 @@
-allow system_app mdnie_sysfs:file { write };
-allow system_app vib_sysfs:file { write };
-allow system_app sysfs_hardware:file rw_file_perms;

@@ -42,6 +42,9 @@ RECOVERY_FSTAB_VERSION := 2
 # assert
 TARGET_OTA_ASSERT_DEVICE := m3,m3xx,i9305,GT-I9305
 
+# LZMA
+WITH_LZMA_OTA := true
+
 # inherit from the proprietary version
 -include vendor/samsung/i9305/BoardConfigVendor.mk
 

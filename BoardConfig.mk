@@ -33,7 +33,7 @@ COMMON_GLOBAL_CFLAGS += -DCAMERA_WITH_CITYID_PARAM
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := cyanogenmod_i9305_defconfig
+TARGET_KERNEL_CONFIG := custom_i9305_defconfig
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/i9305/rootdir/fstab.smdk4x12
@@ -41,9 +41,6 @@ RECOVERY_FSTAB_VERSION := 2
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := m3,m3xx,i9305,GT-I9305
-
-# LZMA
-WITH_LZMA_OTA := true
 
 # inherit from the proprietary version
 -include vendor/samsung/i9305/BoardConfigVendor.mk
@@ -82,3 +79,23 @@ BOARD_SEPOLICY_UNION += \
     wpa.te \
     wpa_supplicant.te \
     zygote.te
+    
+# TWRP
+DEVICE_RESOLUTION := 720x1280
+
+# BlissPop Config Flags
+TARGET_TC_ROM := 4.8-linaro
+TARGET_TC_KERNEL := 4.9-linaro
+BLISSIFY := true
+BLISS_O3 := true
+BLISS_STRICT := false
+BLISS_GRAPHITE := false
+BLISS_KRAIT := false
+BLISS_PIPE := true
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+WITH_LZMA_OTA := true
+TARGET_ENABLE_UKM := true
+
+#SaberMod
+-include vendor/bliss/config/sm.mk

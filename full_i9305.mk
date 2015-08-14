@@ -21,13 +21,16 @@
 # lines, full and toro, hence its name.
 #
 
+# Release name
+PRODUCT_RELEASE_NAME := i9305
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, device/samsung/i9305/device.mk)
+$(call inherit-product, device/samsung/i9305/i9305.mk)
 
-# Discard inherited values and use our own instead.
+
 PRODUCT_NAME := full_i9305
 PRODUCT_DEVICE := i9305
 PRODUCT_BRAND := samsung

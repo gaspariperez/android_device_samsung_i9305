@@ -35,6 +35,10 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/m3
+    
+# Bluetooth    
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth/libbt-vendor.so:system/vendor/lib/libbt-vendor.so
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -74,7 +78,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.nfc_extras
 
-$(call inherit-product, vendor/cyanide/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/bliss/config/nfc_enhanced.mk)
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \

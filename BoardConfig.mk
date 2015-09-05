@@ -93,19 +93,25 @@ BOARD_SEPOLICY_UNION += \
 # TWRP
 DEVICE_RESOLUTION := 720x1280
 
-# BlissPop Config Flags
-TARGET_TC_ROM := 4.8-linaro
-TARGET_TC_KERNEL := 4.9-linaro
-BLISSIFY := true
-BLISS_O3 := true
-BLISS_STRICT := false
-BLISS_GRAPHITE := false
-BLISS_KRAIT := false
-BLISS_PIPE := true
-TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
-WITH_LZMA_OTA := true
-TARGET_ENABLE_UKM := true
+#RR
+TARGET_TC_ROM := 5.1
 
-#SaberMod
--include vendor/bliss/config/sm.mk
+TARGET_TC_KERNEL := 4.9
+
+RROPTI := true
+
+RR_O3 := true
+
+RR_STRICT := false
+
+RR_GRAPHITE := true
+
+RR_KRAIT := false
+
+RR_PIPE := true
+
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+
+RR_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
+WITH_LZMA_OTA := true

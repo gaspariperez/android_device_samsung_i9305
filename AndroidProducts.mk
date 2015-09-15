@@ -16,4 +16,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/full_i9305.mk \
-    $(LOCAL_DIR)/aosp_i9305.mk
+    $(LOCAL_DIR)/liquid_i9305.mk

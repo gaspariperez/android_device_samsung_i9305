@@ -98,5 +98,10 @@ TARGET_GCC_VERSION_AND := 4.9
 
 WITH_LZMA_OTA := true
 
-# LIQUID OPTIMIZATIONS
-LIQUIFY=true
+# Liquid Optimizations
+USE_O3 := true
+STRICT := true
+GRAPHITE := true
+LTO := true
+TARGET_ENABLE_UKM := true
+LIQUID_CHANGELOG := true

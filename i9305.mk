@@ -37,11 +37,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/m3
     
 # Bluetooth    
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/libbt-vendor.so:system/vendor/lib/libbt-vendor.so
     
 # Boothack   
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/boothack/libandroid_runtime.so:system/lib/libandroid_runtime.so \
     $(LOCAL_PATH)/boothack/libandroid_servers.so:system/lib/libandroid_servers.so
 

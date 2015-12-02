@@ -1,1 +1,1 @@
-add_lunch_combo bliss_i9305-userdebug
+add_lunch_combo cm_i9305-userdebug

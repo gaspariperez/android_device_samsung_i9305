@@ -62,3 +62,18 @@ BOARD_SEPOLICY_DIRS += device/samsung/i9305/rilchroot/selinux
 #this is a hack, it relies on this file being processed after the one from smdk4412-qcom-common
 BOARD_RIL_CLASS += ../../../device/samsung/i9305/ril/
 
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+  ifeq ($(WITH_DEXPREOPT),)
+    WITH_DEXPREOPT := true
+  endif
+endif
+
+# LZMA
+WITH_LZMA_OTA := true
+
+# Cyanide Build Flags
+TARGET_CYANIDE_ROM := 4.9
+TARGET_NDK_CYANIDE_ROM := 4.9
+TARGET_CYANIDE_ARM := 4.8
+
